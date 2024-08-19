@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "byebug", "~> 11.1", ">= 11.1.3"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.0"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -12,9 +13,10 @@ gem "puma", ">= 5.0"
 gem "importmap-rails"
 
 gem "rubocop", "~> 1.65", ">= 1.65.1"
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# Hotwires SPA-like page accelerator [https://turbo.hotwired.dev]
+
 gem "turbo-rails"
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+# Hotwires modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
@@ -45,6 +47,9 @@ group :development, :test do
   gem "brakeman", require: false
 
   gem "dotenv-rails", "~> 3.1", ">= 3.1.2"
+  gem "factory_bot_rails"
+  gem "rspec-rails", "~> 6.1", ">= 6.1.4"
+  gem "shoulda-matchers", "~> 6.4"
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
@@ -57,5 +62,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
+  gem "rubocop-rspec", "~> 3.0", ">= 3.0.4"
   gem "selenium-webdriver"
 end
