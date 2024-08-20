@@ -28,4 +28,22 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  common:
+    actions:
+      new: "New"
+      edit: "Edit"
+      show: "Show"
+      delete: "Delete"
+      back: "Back"
+      go_to: "Go to"
+    confirm: "Are you sure?"
+    created: "%{model} created"
+    updated: "%{model} cpdated"
+    destroyed: "%{model} destroyed"
+  products:
+    index:
+      title: "Products"
+    show:
+      title: "Product"
+    edit:
+      title: "Edit Product"

@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to products_path, flash: { notice: "Product was successfully created." }
+      redirect_to products_path, flash: { notice: t("common.created", model: Product.model_name.human) }
     else
       render :new, status: :unprocessable_entity
     end
@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to products_path, flash: { notice: "Product was successfully updated." }
+      redirect_to products_path, flash: { notice: t("common.updated", model: Product.model_name.human)}
     else
       render :edit, status: :unprocessable_entity
     end
@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
     product.destroy
     redirect_to products_path
 
-    flash[:notice] = "Product was successfully deleted."
+    flash[:notice] = t("common.destroyed", model: Product.model_name.human)
   end
 
   private

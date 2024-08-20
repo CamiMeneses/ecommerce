@@ -1,0 +1,31 @@
+es:
+  common:
+    actions:
+      new: "Nuevo"
+      edit: "Editar"
+      show: "Ver"
+      delete: "Eliminar"
+      back: "Volver"
+      go_to: "Ir a"
+    confirm: "¿Estás seguro?"
+    created: "%{model} creado"
+    updated: "%{model} actualizado"
+    destroyed: "%{model} eliminado"
+  products:
+    index:
+      title: "Productos"
+    show:
+      title: "Producto"
+    edit:
+      title: "Editar Producto"
+  activerecord:
+    models:
+      product:
+        one: Producto
+        other: Productos
+    attributes:
+      product:
+        name: Nombre
+        price: Precio
+        description: Descripción
+        images: Imágenes
