@@ -1,0 +1,15 @@
+<%= link_to Category.model_name.human(count: 2), categories_path %>
+<div>
+  <% @category.errors.full_messages.each do |error|%>
+    <p><%= error %></p>
+  <% end %>
+</div>
+<%= form_with(model: category) do |form| %>
+  <div>
+    <%= form.label :name%>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

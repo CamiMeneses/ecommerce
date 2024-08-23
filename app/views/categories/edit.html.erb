@@ -1,0 +1,6 @@
+<% content_for :title, Category.model_name.human %>
+<h1><%= t('.title') %></h1>
+<%= render "form", category: @category %>
+<div>
+  <%= link_to "Back to categories", categories_path %>
+</div>

@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to products_path, flash: { notice: t("common.updated", model: Product.model_name.human)}
+      redirect_to products_path, flash: { notice: t("common.updated", model: Product.model_name.human) }
     else
       render :edit, status: :unprocessable_entity
     end

@@ -38,12 +38,17 @@ en:
       go_to: "Go to"
     confirm: "Are you sure?"
     created: "%{model} created"
-    updated: "%{model} cpdated"
+    updated: "%{model} updated"
     destroyed: "%{model} destroyed"
+  categories:
+    show:
+      title: "Category"
+    edit:
+      title: "Edit category"
   products:
     index:
       title: "Products"
     show:
       title: "Product"
     edit:
-      title: "Edit Product"
+      title: "Edit product"

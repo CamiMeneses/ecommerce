@@ -23,6 +23,9 @@ es:
       product:
         one: Producto
         other: Productos
+      category:
+        one: Categoria
+        other: Categorias
     attributes:
       product:
         name: Nombre
