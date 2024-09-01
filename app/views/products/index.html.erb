@@ -1,4 +1,12 @@
 <h1><%= t('.title') %></h1>
-<%= link_to Category.model_name.human(count: 2), categories_path %>
-<%= link_to t('common.actions.new'), new_product_path %>
-<%= render partial: 'product', collection: @products %>
+<div>
+  <%= link_to Category.model_name.human(count: 2), categories_path %>
+</div>
+<div>
+  <%= link_to t('common.actions.new'), new_product_path %>
+</div>
+<div>
+  <%= link_to t('.all'), products_path %>
+  <%= render partial: 'category', collection: @categories %>
+  <%= render partial: 'product', collection: @products %>
+</div>

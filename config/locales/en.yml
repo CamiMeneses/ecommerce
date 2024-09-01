@@ -30,25 +30,26 @@
 en:
   common:
     actions:
-      new: "New"
-      edit: "Edit"
-      show: "Show"
-      delete: "Delete"
-      back: "Back"
-      go_to: "Go to"
-    confirm: "Are you sure?"
+      new: New
+      edit: Edit
+      show: Show
+      delete: Delete
+      back: Back
+      go_to: Go to
+    confirm: Are you sure?
     created: "%{model} created"
     updated: "%{model} updated"
     destroyed: "%{model} destroyed"
   categories:
     show:
-      title: "Category"
+      title: Category
     edit:
-      title: "Edit category"
+      title: Edit category
   products:
     index:
-      title: "Products"
+      all: All
+      title: Products
     show:
-      title: "Product"
+      title: Product
     edit:
-      title: "Edit product"
+      title: Edit product

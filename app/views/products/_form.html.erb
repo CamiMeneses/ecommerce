@@ -17,6 +17,10 @@
     <%= form.label :price %><br>
     <%= form.text_field :price %>
   </div>
+  <div>
+    <%= form.label :category_id %><br>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
+  </div>
   <% @product.images.each do |image| %>
     <%= form.hidden_field :images, multiple: true, value: image.signed_id %>
   <% end %>

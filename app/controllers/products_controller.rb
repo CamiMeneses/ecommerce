@@ -2,7 +2,11 @@ class ProductsController < ApplicationController
   before_action :product, only: %i[show edit update destroy]
 
   def index
-    @products = Product.all.with_attached_images
+    @categories = Category.order(name: :asc).load_async
+    @products = Product.with_attached_images.order(created_at: :desc).load_async
+    if params[:category_id]
+      @products = @products.where(category_id: params[:category_id])
+    end
   end
 
   def show; end
@@ -40,7 +44,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, images: [])
+    params.require(:product).permit(:name, :description, :price, :category_id, images: [])
   end
 
   def product
