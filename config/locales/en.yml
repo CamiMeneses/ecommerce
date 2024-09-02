@@ -48,6 +48,8 @@ en:
   products:
     index:
       all: All
+      max_price: Maximum price
+      min_price: Minimum price
       title: Products
     show:
       title: Product

@@ -14,6 +14,8 @@ es:
   products:
     index:
       all: Todos
+      min_price: Precio mínimo
+      max_price: Precio máximo
       title: Productos
     show:
       title: Producto

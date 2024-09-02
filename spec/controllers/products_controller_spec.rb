@@ -1,10 +1,26 @@
 require 'rails_helper'
 
 RSpec.describe ProductsController, type: :controller do
-  describe 'GET #index' do
-    subject { get :index }
+  let(:category1) { create(:category, name: 'home') }
+  let(:category2) { create(:category, name: 'technology') }
+  let!(:product1) { create(:product, price: 100, category: category1) }
+  let!(:product2) { create(:product, price: 200, category: category2) }
 
-    it { should have_http_status(:success) }
+  describe 'GET #index' do
+    it 'returns all products' do
+      get :index
+      expect(response).to have_http_status(:success)
+    end
+
+    it 'returns only products in the specified category' do
+      get :index, params: { category_id: product1.category.id }
+      expect(assigns(:products)).to contain_exactly(product1)
+    end
+
+    it 'returns only products between the rank' do
+     get :index, params: { min_price: 150, max_price: 200 }
+      expect(assigns(:products)).to contain_exactly(product2)
+    end
   end
 
   describe 'GET #show' do
