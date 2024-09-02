@@ -16,7 +16,7 @@ RSpec.describe ProductsController, type: :controller do
 
   describe 'POST #create' do
   let(:category) { create(:category) }
-    let(:product_params) { { product: { name: 'Product', description: 'Description', price: 100, category } } }
+    let(:product_params) { { product: { name: 'Product', description: 'Description', price: 100, category_id: category.id } } }
     let(:product) { create(:product) }
     subject { post :create, params: product_params }
 

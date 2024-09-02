@@ -5,7 +5,7 @@
   <% product.images.each do |image| %>
      <%= image_tag image, width: 200 %>
   <% end %>
-  <%= link_to t('common.actions.go_to'), product_path(product) %>
+  <%= link_to t('common.actions.go_to'), product_path(product), 'data-turbo-frame': '_top' %>
   <%= link_to t('common.actions.edit'), edit_product_path(product) %>
   <%= link_to t('common.actions.delete'), product_path(product), data: { turbo_method: :delete, turbo_confirm: 'Estás seguro?' } %>
 </div>
