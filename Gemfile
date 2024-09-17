@@ -51,7 +51,7 @@ group :development, :test do
 
   gem "dotenv-rails", "~> 3.1", ">= 3.1.2"
   gem "factory_bot_rails"
-  gem "rspec-rails", "~> 6.1", ">= 6.1.4"
+  gem "rspec-rails", "~> 7.0"
   gem "shoulda-matchers", "~> 6.4"
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
