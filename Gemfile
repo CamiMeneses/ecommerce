@@ -66,7 +66,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "faker", "~> 3.4", ">= 3.4.2"
-  gem "rubocop-rspec", "~> 3.0", ">= 3.0.4"
+  gem "rubocop-rspec", "~> 3.1"
   gem "selenium-webdriver"
   gem "rails-controller-testing", "~> 1.0", ">= 1.0.5"
 end
